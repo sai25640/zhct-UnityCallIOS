@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import "UnityTest.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation UnityTest
 
@@ -14,8 +16,10 @@
     UIImagePickerController *picker;
     picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
+    picker.allowsEditing = NO;
     picker.sourceType = type;
+    picker.mediaTypes = @[@"public.movie"];
+    NSLog(@"%@",picker.mediaTypes);
     
     [self presentViewController: picker animated:YES completion:nil];
 }
@@ -23,11 +27,23 @@
 -(void)imagePickerController:(UIImagePickerController *)pic didFinishPickingMediaWithInfo:(NSDictionary *)
 info{
     [pic dismissViewControllerAnimated:YES completion:nil];
+    NSString *mediaType=[info objectForKey:UIImagePickerControllerMediaType];
+    if ([mediaType isEqualToString:@"public.image"]) {//如果是拍照
+        UIImage *image = info[UIImagePickerControllerOriginalImage];
+        
+        NSString *imagePath =[self GetSavePath:@"temp.mp4"];
+        [self SaveFileToDoc: image path:imagePath];
+    }else if([mediaType isEqualToString:@"public.movie"]){
+        NSURL * url = [info objectForKey:UIImagePickerControllerMediaURL];
+        NSData * data = [NSData dataWithContentsOfURL:url];
+        NSLog(@"%@",data);
+        
+        
+        NSString *videoPath =[self GetSavePath:@"temp.mp4"];
+        NSString *videoStr = [data base64Encoding];
+        UnitySendMessage("Main Camera", "IOSBack", videoStr.UTF8String);
+    }
     
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-    
-    NSString *imagePath =[self GetSavePath:@"Temp.jpg"];
-    [self SaveFileToDoc: image path:imagePath];
 }
 
 -(NSString *)GetSavePath:(NSString *)filename{
@@ -45,7 +61,7 @@ info{
         data = UIImagePNGRepresentation(image);
     }
     
-    NSString *imageStr = [data bas64Encoding];
+    NSString *imageStr = [data base64Encoding];
     UnitySendMessage("Main Camera", "IOSBack", imageStr.UTF8String);
     //[data writeToFile:path atomically:YES];
     //UnitySendMessage("Main Camera", "IOSBack", "Temp.jpg");

@@ -33,31 +33,15 @@ public class IOSTest : MonoBehaviour
         }
     }
 
-    //void IOSBack(string fileName)
-    //{
-    //    debug.text = Application.persistentDataPath+"/"+fileName;
-    //    StartCoroutine(LoadTexture(debug.text));                                   
-    //}
-
     void IOSBack(string base64)
     {
         debug.text = base64;
-        StartCoroutine(LoadTexture(base64));
+        //StartCoroutine(LoadTexture(base64));
+        StartCoroutine(LoadVideo(base64));
     }
 
     IEnumerator LoadTexture(string url)
     {
-        //using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
-        // {
-        // yield return request.SendWebRequest();
-        //if (request.isNetworkError || request.isHttpError)
-        //{
-        //    debug.text = request.error;
-        //}
-        //else
-        //{
-        //Texture2D tex = new Texture2D(128, 128);
-        //tex.LoadImage(request.downloadHandler.data);
         byte[] bytes = System.Convert.FromBase64String(url);
         image.texture = Base64StringToTexture2D(url);
         WWWForm form = new WWWForm();
@@ -73,9 +57,26 @@ public class IOSTest : MonoBehaviour
             {
                 debug.text = "Finished Uploading Screenshot";
             }
-        }
-        // }   
-        // }      
+        }  
+    }
+
+    IEnumerator LoadVideo(string url)
+    {
+        byte[] bytes = System.Convert.FromBase64String(url);
+        WWWForm form = new WWWForm();
+        form.AddBinaryData("myFile", bytes, "Temp.mp4");
+        using (var w = UnityWebRequest.Post("http://192.168.1.125:8080/test_upload.php", form))
+        {
+            yield return w.SendWebRequest();
+            if (w.isNetworkError || w.isHttpError)
+            {
+                debug.text = w.error;
+            }
+            else
+            {
+                debug.text = "Finished Uploading Screenshot";
+            }
+        } 
     }
 
     /// <summary>
@@ -98,11 +99,11 @@ public class IOSTest : MonoBehaviour
         return tex;
     }
 
-
     public void Test()
     {
-        string path = Application.streamingAssetsPath + "/" + "2.png";
-        StartCoroutine(LoadTexture(path));
+        string path = Application.streamingAssetsPath + "/" + "video_1.mp4";
+        //StartCoroutine(LoadTexture(path));
+        StartCoroutine(LoadVideo(path));
     }
 
 
