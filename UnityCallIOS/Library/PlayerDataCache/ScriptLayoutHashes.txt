@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-D:/项目存档/zhct-UnityCallIOS/UnityCallIOS/app9
+D:/Project_Git/zhct-UnityCallIOS/UnityCallIOS/app25
 SceneListBegin?
 Assets/main.unity
 SceneListEnd?
@@ -16,6 +16,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+7d165bd22388cc8ce94589fca652d993 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.DemoInfo
+25a1b8c4cd120ba188d8a8c7072f5a09 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.DisplayUGUI
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -80,6 +82,8 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SphereDemo
+f6f2ee79808e9510adf72293295bf562 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.CubemapCube
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -92,6 +96,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+1c1ea89a4a721967d83886c841306461 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.ChangeVideoExample
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -114,9 +119,15 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.AutoRotate
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-7d7499423ced8c51102dd5951d3c80ed Assembly-CSharp.dll:.IOSTest
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.SampleApp
+5aaf88d112ab46ce0f1df933f46951e2 Assembly-CSharp.dll:.IOSTest
+0e97241d5d9417e0b1976b8852147c7c Assembly-CSharp.dll:.SizeClipController
+5957e9f6dd33ebd92dde2f8bdca21af4 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.UpdateStereoMaterial
+218f4a754edc6e5bb4f437d128fa629d Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.VCR
+b59ad4ce82b6f9df2a8c6e94119154c4 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.DisplayIMGUI
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -131,6 +142,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+f3997dd34fe7fc37c3c3c8fd3130b992 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.ApplyToMesh
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -147,4 +159,10 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+40f56e0b07a0cf69a1e6c06c9db4eb90 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.MediaPlayer
+4c6d5bde1fcc57b27ceabdf7870e2d71 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.Mapping3D
+9265812f4a2c3588b2070f953542e150 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.DisplayBackground
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+a351edb4e81d080d9b058db7a6d29cae Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.SimpleController
+fc7d2c6d902c809226fd8ee58e3344f5 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.ApplyToMaterial
+b2d676126ba74960ee48abcb00f68590 Assembly-CSharp.dll:RenderHeads.Media.AVProVideo.Demos.FrameExtract
