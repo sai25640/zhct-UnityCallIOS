@@ -103,13 +103,15 @@ namespace RenderHeads.Media.AVProVideo.Demos
 		{
 			// Extract the frame to Texture2D
 			float timeSeconds = _frameIndex * _timeStepSeconds;
-			_texture = _mediaPlayer.ExtractFrame(_texture, timeSeconds, _accurateSeek, _timeoutMs);
+
+            _texture = _mediaPlayer.ExtractFrame(_texture, timeSeconds, _accurateSeek, _timeoutMs);
 
 #if AVPRO_FILESYSTEM_SUPPORT
 			// Save frame to JPG
 			if (_saveToJPG)
 			{
 				string filePath = _filenamePrefix + "-" + _frameIndex + ".jpg";
+                Debug.Log(filePath);
 				System.IO.File.WriteAllBytes(filePath, _texture.EncodeToJPG());
 			}
 #endif

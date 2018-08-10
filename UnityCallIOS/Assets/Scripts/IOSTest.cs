@@ -27,6 +27,10 @@ public class IOSTest : MonoBehaviour
     private static extern void IOS_CloseView();
 
     private  int ScaleFactor = 2; //设备分辨率/逻辑分辨率
+    private void Start()
+    {
+        XDebugger.Log("Start");
+    }
     public void OpenCamera()
     {
         if (Application.platform == RuntimePlatform.IPhonePlayer)
